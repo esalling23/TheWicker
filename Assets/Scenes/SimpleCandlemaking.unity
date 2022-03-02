@@ -350,6 +350,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6959447448877174767, guid: 1cb73842221874ec9a59acc381f3a44d, type: 3}
   m_PrefabInstance: {fileID: 6959447447564426576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312887488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4278672093146707652, guid: 1cb73842221874ec9a59acc381f3a44d, type: 3}
+  m_PrefabInstance: {fileID: 6959447447564426576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e6688a0972b4742ad75dde6e96146b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2140476142
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +504,10 @@ PrefabInstance:
       propertyPath: _orderBoard
       value: 
       objectReference: {fileID: 803552602}
+    - target: {fileID: 816707696291808801, guid: e420d8815236d45d8bb69cb512d8b322, type: 3}
+      propertyPath: _candlemaker
+      value: 
+      objectReference: {fileID: 1312887488}
     - target: {fileID: 816707696291808802, guid: e420d8815236d45d8bb69cb512d8b322, type: 3}
       propertyPath: m_Name
       value: LevelManager
