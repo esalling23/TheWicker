@@ -118,6 +118,7 @@ public class Grid : MonoBehaviour
     {
         // Temp, just replace the item 
         _selectedItem.SetupIngredient(GenerateIngredient());
+        _selectedItem = null;
 
         // To do 
         // shift around ingredients

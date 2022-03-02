@@ -82,6 +82,7 @@ public class GridItem : MonoBehaviour, IPointerDownHandler
 
     public void SetupIngredient(Ingredient newIngredient)
     {
+        _selected = false;
         _ingredient = newIngredient;
         // Make the ingredient a child of this gridItem
         _ingredient.transform.SetParent(transform);
