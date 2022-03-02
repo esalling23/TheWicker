@@ -135,6 +135,7 @@ public class Timer : MonoBehaviour
   /// </summary>
   public void TogglePause(bool pause)
   {
+    _started = !pause;
     _running = !pause;
   }
 

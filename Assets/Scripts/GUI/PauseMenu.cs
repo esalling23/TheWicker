@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
         EventManager.TriggerEvent(EventName.TogglePause, new Dictionary<string, object> {
             { "pause", false }
         });
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     #endregion

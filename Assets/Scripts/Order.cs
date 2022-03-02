@@ -12,6 +12,7 @@ public class Order : MonoBehaviour
     float _timeLimit;
     Timer _timer;
     [SerializeField] TextMeshProUGUI _timerText;
+    bool _active;
 
     // Request support
     IngredientName[] _ingredientRequests;
@@ -21,6 +22,11 @@ public class Order : MonoBehaviour
     #endregion
 
     #region Properties
+
+    public bool IsActive
+    {
+        get { return _active; }
+    }
 
     /// <summary>
     /// Description of this exposed property
@@ -95,11 +101,14 @@ public class Order : MonoBehaviour
     public void StartOrder() 
     {
         _timer.Run();
+        _active = true;
     }
 
     void HandleTogglePause(Dictionary<string, object> msg)
     {
-        _timer.TogglePause((bool) msg["pause"]);
+        if (_active) {
+            _timer.TogglePause((bool) msg["pause"]);
+        }
     }
 
     #endregion
