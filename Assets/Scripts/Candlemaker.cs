@@ -7,7 +7,7 @@ public class Candlemaker : MonoBehaviour
     #region Fields
 
     GameObject[] _ingredientSlots;
-    List<Ingredient> _candleIngredients;
+    List<Ingredient> _candleIngredients = new List<Ingredient>();
     int _slotCount;
 
     [SerializeField] GameObject _slotPrefab;
@@ -35,7 +35,6 @@ public class Candlemaker : MonoBehaviour
     void Start()
     {
         EventManager.StartListening(EventName.UseIngredient, HandleUseIngredient);
-
     }
 
     /// <summary>
@@ -53,7 +52,6 @@ public class Candlemaker : MonoBehaviour
     public void Setup(int slotCount = 4)
     {
         _slotCount = 4;
-        ClearSlots();
 
         _ingredientSlots = new GameObject[slotCount];
         for (int i = 0; i < _slotCount; i++)
@@ -67,7 +65,9 @@ public class Candlemaker : MonoBehaviour
         foreach (GameObject item in _ingredientSlots)
         {
             Ingredient slotIngredient = item.GetComponentInChildren<Ingredient>();
-            Destroy(slotIngredient.gameObject);
+            if (slotIngredient) {
+                Destroy(slotIngredient.gameObject);
+            }
         }
 
         _candleIngredients = new List<Ingredient>();

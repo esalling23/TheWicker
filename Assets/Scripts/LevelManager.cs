@@ -23,6 +23,7 @@ public class LevelManager : MonoBehaviour
     private List<Candle> _candlesCreated;
 
     [Header("Level Objects")]
+    [SerializeField] Candlemaker _candlemaker;
     [SerializeField] OrderBoard _orderBoard;
     [SerializeField] Grid _grid;
 
@@ -120,6 +121,7 @@ public class LevelManager : MonoBehaviour
         // Setup order board, candle making area
         _orderBoard.UpdateBoard(true);
         _grid.GenerateGrid(5);
+        _candlemaker.Setup();
     }
 
     private void HandleLoseOrder(Dictionary<string, object> msg) 
